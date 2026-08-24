@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw
 distance_px = 0
 root = None
 icon = None
+DPI = 96 # Adjust your DPI here
 
 
 def euclidean_distance(a, b):
@@ -17,7 +18,7 @@ def euclidean_distance(a, b):
 
 
 def px_to_m(px):
-    return (px / 96) * 0.0254
+    return (px / DPI) * 0.0254
 
 
 def track_mouse(label):
